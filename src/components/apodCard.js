@@ -1,8 +1,15 @@
 import React from "react";
 
-const card = props => {
-
-    return null;
+const ApodCard = props => {
+    
+    return (
+        <div className="astronomyInfo" key={props.service_version}>
+            <img src={props.url} alt={'NASAs APOD'}/>
+            <h2>{props.title}</h2>
+            <h4>{props.date}</h4>
+            <p>{props.explanation}</p>
+        </div>
+    );
 };
 
-export default card;
+export default ApodCard;

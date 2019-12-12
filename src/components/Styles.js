@@ -8,3 +8,13 @@ export const MainImg = styled.img`
 export const AstroDiv = styled.div`
     margin 10px;
 `;
+
+export const ButtonDiv = styled.div`
+    padding: 10px;
+    margin: 0 20px;
+`;
+
+export const ActionDiv = styled.div`
+    display: flex;
+    justify-content: center;
+`;

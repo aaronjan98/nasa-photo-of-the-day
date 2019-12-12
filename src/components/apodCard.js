@@ -1,5 +1,5 @@
 import React from "react";
-import { MainImg, AstroDiv } from "./Styles.js";
+import { MainImg, AstroDiv, ButtonDiv, ActionDiv } from "./Styles.js";
 import {
     CardText, CardBody,
     CardTitle, CardSubtitle, Button
@@ -11,11 +11,17 @@ const ApodCard = props => {
         <AstroDiv>
             <MainImg top width="100%" src={props.url} alt={'NASAs APOD'} key={props.service_version}/>
             <CardBody>
-                <CardTitle>{props.title}</CardTitle>
+                <CardTitle style={{fontSize: "2rem"}}>{props.title}</CardTitle>
                 <CardSubtitle>{props.date}</CardSubtitle>
-                <CardText>{props.explanation}</CardText>
-                <Button>Previous Day</Button>
-                <Button>Next Day</Button>
+                <CardText style={{fontSize: "1.5rem"}}>{props.explanation}</CardText>
+                <ActionDiv>
+                    <ButtonDiv>
+                        <Button outline color="danger">Previous Day</Button>
+                    </ButtonDiv>
+                    <ButtonDiv>
+                        <Button outline color="success">Following Day</Button>
+                    </ButtonDiv>
+                </ActionDiv>
             </CardBody>
         </AstroDiv>
     );

@@ -3,7 +3,7 @@ import axios from "axios";
 import ApodCard from "./ApodCard";
 
 function ApodList (){
-    const [picInfo, setPicInfo] = useState(Object);
+    const [picInfo, setPicInfo] = useState([]);
 
     useEffect(() => {
         axios
@@ -21,7 +21,7 @@ function ApodList (){
       return (
         <div className="pic-container">
               <ApodCard
-               // key={pic.service_version}
+                key={picInfo.service_version}
                 url={picInfo.url}
                 title={picInfo.title}
                 date={picInfo.date}
